@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Challenge</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="{{ url_for('static', filename='css/style.css')}}" rel="stylesheet">
+  </head>
+  <body>
+    <main>
+      <div class="matrix">
+        <h2>Matrix</h2>
+        <table>
+          <tr>
+            <th>
+            </th>
+            {% for node in nodes %}
+              <th>
+                {{node}}  
+              </th>
+            {% endfor %}
+          </tr>
+          
+          {% for row in matrix %}
+            <tr> 
+              <td class="scope"> 
+                {{ loop.index-1 }}
+              </td>
+              {% for value in row %}
+              <td> 
+                {{ value }}
+              </td>
+            {% endfor %}
+            </tr>
+          {% endfor %}
+        </table>
+    
+      </div>
+      <div class="Formulario">
+        <h2>Enter two Nodes: </h2>    
+        <form id="adjacentForm" method="POST">
+          <label for="node1">Node1</label>
+          <input type="number" name="node1" min="0" max="{{num_nodes}}" required>
+          <label for="node2">Node2</label>
+          <input type="number" name="node2" min="0" max="{{num_nodes}}" required>
+          <input id="enviar" type="submit" value="send">
+        </form> 
+        <div class="messages">
+          <p id="response"></p>
+        </div>    
+   
+      </div>  
+    </main>
+    <script src="{{ url_for('static', filename='js/index.js')}}"></script>
+  </body>
+</html>

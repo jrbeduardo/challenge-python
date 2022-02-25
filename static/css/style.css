@@ -1,0 +1,82 @@
+html{
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+*,
+::after,
+::before{
+  box-sizing: inherit;
+}
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form > * {
+  width: 80%;
+  margin-top: 0.5rem;
+}
+
+h1{
+  text-align: center;
+}
+
+h2{
+  margin: 2rem;
+  text-align: center;
+}
+
+input[type="submit"]{
+  border: thin solid #444;
+  cursor: pointer;
+  display: inline-block;
+  color: #444;
+  font-weight: bold;
+  padding: 0.25rem;
+}
+
+input[type="number"]{
+  border: thin solid #dedede;
+  cursor: pointer;
+  display: inline-block;
+  color: #444;
+  padding: 0.5rem;
+}
+
+main{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.matrix{
+  width: 60%;
+}
+
+.messages{
+  padding: 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+td {
+  border: 1px solid;
+  padding: 1rem;
+}
+
+table{
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.scope{
+  border: none;
+  font-weight: bold;
+  padding: 1rem;  
+}
